@@ -1,0 +1,153 @@
+############################
+EXERCÍCIO 01 - Operações nos Python
+a = "Olá mundo"
+b = 1
+c = 5/2
+d = 5 == 1
+
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+
+############################
+EXERCÍCIO 02 - Operações nos Python
+valor_compras = 150.2
+desconto = 0.15
+quantidade_itens = 9
+valor_final = valor_compras*(1-desconto)
+custo_medio = valor_final/quantidade_itens
+
+print('O valor final da sua compra com descontos foi de R${:.3f}'.format(valor_final))
+print('O preço médio dos itens foi de R${:.3f}'.format(custo_medio))
+
+############################
+EXERCÍCIO 01 - Controle de Fluxo (Condicionais)
+
+valor_entrada = int(input('Digite um número inteiro: '))
+
+a = valor_entrada % 3
+b = valor_entrada % 5
+
+if a == 0 and b == 0:
+    print('FizzBuzz')
+elif a == 0 and b != 0:
+    print('Fizz')
+elif a != 0 and b == 0:
+    print('Buzz')
+else:
+    print ('...')
+
+############################
+EXERCÍCIO 02 - Controle de Fluxo (Condicionais)
+
+a = float(input('Digite um número: '))
+b = float(input('Digite um número: '))
+op = input('Digite a operação desejada (|+|-|*|/|**|):')
+
+if op == "+":
+    resultado = a + b
+elif op == "-":
+    resultado = a - b
+elif op == "*":
+    resultado = a * b
+elif op == "**":
+    resultado = a**b
+elif op == "/":
+    if b == 0:
+        resultado == False
+        print('Não é possível realizar divisão por zero!')
+    else:
+        resultado == a / b
+else:
+    print('Operador inválido')
+
+print('O resultado de {}{}{} é = {}'.format(a,op,b,resultado))
+
+############################
+EXERCÍCIO 03 - Controle de Fluxo (Condicionais)
+
+ref_user = 'admin'
+ref_password = '123123'
+
+user = input('Usuário: ')
+password = input('Senha: ')
+
+if user == ref_user and password == ref_password:
+    print('Autenticação bem-sucedida!')
+
+elif user != ref_user:
+    print('Usuário ({}) inexsistente!'.format(user))
+
+elif password != ref_password:
+    print('Senha incorreta!')
+
+else:
+    False
+
+############################
+EXERCÍCIO 01 - Controle de Fluxo (Repetição)
+
+n = int(input('Indique um número inteiro: '))
+i = 1
+soma = 0
+
+while i<=n:
+    soma = soma+i
+    i = i+1
+print(soma)
+
+############################
+EXERCÍCIO 02 - Controle de Fluxo (Repetição)
+
+n = int(input('Indique um número inteiro: '))
+i = 1
+soma = 0
+
+while i<=n:
+    if i%2 == 0:
+        print(i)
+    else:
+        False
+    i = i+1
+    
+############################
+EXERCÍCIO 03 - Controle de Fluxo (Repetição)
+
+n = int(input('Indique um número inteiro: '))
+i = 1
+div_int = 0
+
+while i<=n:
+    if n%i == 0:
+        div_int = div_int + 1
+    else:
+        False
+    i = i+1
+
+if div_int == 2:
+    print('O número é primo!')
+else:
+    print('O número não é primo!')
+
+############################
+EXERCÍCIO 04 - Controle de Fluxo (Repetição)
+
+num = 8
+cont = 0
+tentativas = 2
+
+while cont <= tentativas:
+    print('Tentativa {} de {}'.format(cont+1,tentativas+1))
+    palpite = int(input('Qual o número desconhecido? '))
+    
+    if palpite == num:
+        print('Você acertou!')
+        break
+    elif palpite > num and cont< tentativas:
+        print('O número desconhecido é menor que seu palpite! Tente novamente.')
+    elif palpite < num and cont< tentativas:
+        print('O número desconhecido é maior que seu palpite! Tente novamente.')
+    else:
+        print('You lose!')
+    cont = cont +1    
